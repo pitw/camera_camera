@@ -106,5 +106,6 @@ class CameraNotifier extends ChangeNotifier {
 
   void dispose() {
     super.dispose();
+    _cameraController?.dispose();
   }
 }

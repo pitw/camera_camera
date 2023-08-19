@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final photos = <File>[];
+  final photos = <XFile>[];
 
   void openCamera() {
     Navigator.push(
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: kIsWeb
                 ? Image.network(photos[index].path)
                 : Image.file(
-                    photos[index],
+                    File(photos[index].path),
                     fit: BoxFit.cover,
                   ),
           ),
